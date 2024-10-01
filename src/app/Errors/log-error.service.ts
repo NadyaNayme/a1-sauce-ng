@@ -35,7 +35,7 @@ export class LogErrorService {
         this.renderer.addClass(closeButton, 'close-button');
 
         this.renderer.listen(closeButton, 'click', () => {
-            this.closeError(headerContainer);
+            this.closeError(headerContainer.parentElement());
         });
 
         this.renderer.appendChild(headerContainer, header);
