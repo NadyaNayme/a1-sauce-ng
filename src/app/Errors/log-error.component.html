@@ -1,0 +1,9 @@
+<div *ngIf="error" id="Error">
+    <div class="title-row">
+        <h2>{{ error.title }}</h2>
+        <button title="Close error window" class="nisbutton close-button" (click)="closeError()">
+            Close Error
+        </button>
+    </div>
+    <div [innerHTML]="error.message"></div>
+</div>

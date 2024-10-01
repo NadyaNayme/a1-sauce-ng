@@ -1,0 +1,67 @@
+body:has(#Error) {
+	overflow: hidden !important;
+}
+
+body:has(#Error)::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 95;
+    display: block;
+    width: 500vh;
+    height: 500vh;
+    background-color: rgb(0 0 0 / 70%);
+}
+
+#Error {
+	position: fixed;
+	top: 2rem;
+	left: 5%;
+	z-index: 99;
+	width: 100vw;
+	max-width: 80%;
+	padding: 2rem;
+	border: solid 2px #ffcb05;
+	background-image: url("../Images/NIS/background.png");
+}
+
+#Error .title-row {
+	position: sticky;
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	border-bottom: solid 2px #ffcb05;
+	background-image: url("../Images/NIS/background.png");
+	margin-bottom: 3rem;
+}
+
+#Error p {
+	max-width: 90%;
+}
+
+#Error img {
+	max-width: 90%;
+	margin: 1rem auto;
+}
+
+#Error h2, #Error h3 {
+	color: #ffcb05;
+    text-shadow: 1px 1px #000;
+	letter-spacing: 1px;
+}
+
+#Error .close-button {
+	margin-left: 3rem;
+	white-space: nowrap;
+}
+
+#Error .close-button:hover {
+	cursor: pointer;
+}
+
+#Error li {
+	max-width: 80vw;
+	margin-bottom: .35rem;
+}
